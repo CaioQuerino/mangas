@@ -111,7 +111,7 @@ input[type="text"],
 input[type="email"] {
     border: 1px solid var(--corFundo1);
     border-radius: 3px;
-    width: 60%;
+    width: 200px;
     text-align: center;
     background-color: var(--backgroundInputs);
     height: 30px;
@@ -132,6 +132,10 @@ label {
     color: var(--corFonte1);
     align-items: center;
     margin-bottom: 5px; /* Adiciona espaçamento abaixo do label */
+}
+
+.checkbox{
+    font-size: 18px;
 }
 
 .areaCadastro {
