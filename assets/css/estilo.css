@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+@font-face {
+    font-family: 'advent pro';
+    src: url(../font/Advent_Pro/AdventPro-VariableFont_wdth\,wght.ttf);
+}
+
+:root {
+    --corHeader: hsl(0, 100%, 34%);
+    --corFundo1: hsl(0, 0%, 0%);
+    --corFundo2: hsl(0, 0%, 14%);
+    --backgroundInputs: hsl(0, 0%, 54%);
+    --corButton: hsl(0, 0%, 54%);
+    --corFonte1: hsl(0, 0%, 100%);
+    --Destaque1: hsl(59, 100%, 34%);
+    --fontAdventPro: 'advent pro';
+}
+
+body {
+    background-color: var(--corFundo1);
+    font: normal 500 32px var(--fontAdventPro);
+    color: white;
+    display: grid;
+}
+
+header {
+    height: 100px;
+    background-color: var(--corHeader);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    color: #000;
+    gap: 32px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+a {
+    color: var(--corFonte1);
+}
+
+
+a:hover {
+    color: var(--Destaque1);
+}
+
+picture {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    margin: 30px;
+    background-color: var(--corFundo2);
+    display: none;
+    grid-template-columns: repeat(6, 16.66%);
+    grid-template-rows: auto;
+    padding: 30px 0;
+    row-gap: 32px;
+    justify-items: center;
+    color: #000;
+}
+
+.section.active {
+    display: grid;
+}
+
+h2 {
+    grid-column: 1 / -1; /* Faz com que o h2 ocupe toda a largura da section */
+    margin: 20px;
+    color: var(--corFonte1);
+    text-align: center;
+}
+
+section > div {
+    background-color: white;
+    height: 200px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1005px) {
+    section {
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 705px) {
+    section {
+        grid-template-columns: repeat(3, 33.33%);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 555px) {
+    section {
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: auto;
+    }
+
+    h2 {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 395px) {
+    section {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: auto;
+    }
+
+    nav {
+        display: block;
+    }
+
+    h2 {
+        font-size: 40px;
+        display: block;
+    }
+}
