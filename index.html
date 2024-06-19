@@ -34,11 +34,32 @@
         <div>Mangá</div>
     </section>
 
-    <section class="section" id="areaCadastro">
+    <section class="section active" id="areaCadastro">
         <h2><a href="#" onclick="display('inicio')">Voltar</a></h2>
 
-        <h2>Área de Cadastro</h2>
-        <!-- Conteúdo de Cadastro -->
+        <form id="idRegistro">
+            <fieldset>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="idNome" autocomplete="off">
+            </fieldset>
+
+            <fieldset>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="idEmail" autocomplete="off">
+            </fieldset>
+
+            <fieldset>
+                <label for="senha">Senha</label>
+                <input type="text" name="senha" id="idSenha" autocomplete="off">
+            </fieldset>
+
+            <fieldset>
+                <label for="conf_senha">Confirme</label>
+                <input type="text" name="conf_senha" id="conf_senha" autocomplete="off">
+            </fieldset>
+
+            <input type="button" value="Criar" onclick="registrar()">
+        </form>
     </section>
 
     <section class="section" id="areaLogin">

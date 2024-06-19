@@ -5,9 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    border: none;
 }
-
-
 
 @font-face {
     font-family: 'advent pro';
@@ -51,7 +50,6 @@ nav {
 a {
     color: var(--corFonte1);
 }
-
 
 a:hover {
     color: var(--Destaque1);
@@ -98,6 +96,55 @@ section > div {
     justify-content: center;
 }
 
+#idRegistro {
+    grid-column: 1 / -1;
+    justify-content: center;
+    background-color: #424242;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens no eixo horizontal */
+}
+
+input[type="text"],
+input[type="email"] {
+    border: 1px solid var(--corFundo1);
+    border-radius: 3px;
+    width: 200px;
+    text-align: center;
+    background-color: var(--backgroundInputs);
+    height: 30px;
+    color: gold;
+    margin-bottom: 15px; /* Adiciona espaçamento entre os campos de entrada */
+}
+
+input[type="button"] {
+    width: 50%;
+    height: 35px;
+    align-self: center;
+    background-color: var(--corButton);
+    color: var(--corFonte1);
+    border-radius: 5px;
+}
+
+label {
+    color: var(--corFonte1);
+    align-items: center;
+    margin-bottom: 5px; /* Adiciona espaçamento abaixo do label */
+}
+
+.areaCadastro {
+    display: flex;
+    justify-items: center;
+}
+
+fieldset {
+    text-align: center;
+    border: none; /* Remove a borda do fieldset */
+    margin-bottom: 20px; /* Adiciona espaçamento entre os fieldsets */
+}
+
 @media (max-width: 1005px) {
     section {
         grid-template-columns: repeat(4, 25%);
@@ -120,6 +167,17 @@ section > div {
 
     h2 {
         padding-left: 0;
+    }
+}
+
+@media (max-width: 439px) {
+    input[type="text"],
+    input[type="email"] {
+        width: 80%;
+    }
+
+    #idRegistro {
+        padding: 3px;
     }
 }
 
