@@ -29,6 +29,11 @@ body {
     font: normal 500 32px var(--fontAdventPro);
     color: white;
     display: grid;
+    background-image: url(../img/Default_A_vibrant_digital_illustration_of_a_Mangainspired_char_2.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 header {
@@ -66,7 +71,6 @@ picture {
 
 section {
     margin: 30px;
-    background-color: var(--corFundo2);
     display: none;
     grid-template-columns: repeat(6, 16.66%);
     grid-template-rows: auto;
