@@ -41,30 +41,37 @@
             <fieldset>
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="idNome" autocomplete="off">
+                <p id="erroNome" style="color: red; font-size: 20px;"></p>
             </fieldset>
 
             <fieldset>
                 <label for="email">E-mail</label>
                 <input type="email" name="email" id="idEmail" autocomplete="off">
+                <p id="erroEmail" style="color: red; font-size: 20px;"></p>
             </fieldset>
 
             <fieldset>
                 <label for="senha">Senha</label>
-                <input type="text" name="senha" id="idSenha" autocomplete="off">
+                <input type="password" name="senha" id="idSenha" autocomplete="off">
             </fieldset>
 
             <fieldset>
                 <label for="conf_senha">Confirme</label>
-                <input type="text" name="conf_senha" id="conf_senha" autocomplete="off">
+                <input type="password" name="conf_senha" id="conf_senha" autocomplete="off">
+                
+                <p id="erroSenha" style="color: red; font-size: 20px;"></p>
             </fieldset>
 
             <fieldset class="checkbox">
                 <input type="checkbox" name="checkbox" id="idCheckBox">
                 <label for="checkbox">Li e aceito os termo de serviços</label>
+                <p id="erroCheckBox"  style="color: red; font-size: 20px;"></p>
+                <p id="Registro" style="color: chartreuse;"></p>
             </fieldset>
             
 
-            <input type="button" value="Criar" onclick="registrar()">
+            <input type="button" value="Criar" onclick="validar()">
+            <p id="erro"></p>
         </form>
     </section>
 
@@ -75,6 +82,4 @@
         <!-- Conteúdo de Login -->
     </section>
 
-    <script src="assets/js/script.js"></script>
-</body>
-</html>
+    <script src="assets/js/scr
