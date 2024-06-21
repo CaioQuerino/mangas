@@ -152,19 +152,7 @@ label {
     font-size: 18px;
 }
 
-.areaCadastro {
-    display: flex;
-    justify-items: center;
-}
 
-#areaLogin{
-    grid-column: 1 / -1;
-    display: flex;
-    flex-direction: column;
-    padding: 50px;
-    gap: 0;
-
-}
 
 fieldset {
     text-align: center;
