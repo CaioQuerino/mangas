@@ -1,33 +1,33 @@
-
 function display(idSection) {
-    var sections = document.querySelectorAll('.section');
+    let sections = document.querySelectorAll('.section');
     sections.forEach(function(section) {
         section.classList.remove('active');
     });
 
-    var selectedSection = document.getElementById(idSection);
+    let selectedSection = document.getElementById(idSection);
     if (selectedSection) {
         selectedSection.classList.add('active');
     }
 }
 
-function registrar(nome, email, senha) {
+function registrar(nome, email, senha, c_senha) {
     localStorage.setItem('Nome', nome)
     localStorage.setItem('Email', email);
     localStorage.setItem('Senha', senha);
+    localStorage.setItem('c_senha', c_senha);
 }
 
 function validar() {
 
     document.getElementById('Registro').innerHTML = '';
 
-    var nome = document.getElementById('idNome').value;
-    var email = document.getElementById('idEmail').value;
-    var senha = document.getElementById('idSenha').value;
-    var c_senha = document.getElementById('conf_senha').value;
-    var checkBox = document.getElementById('idCheckBox');
+    let nome = document.getElementById('idNome').value;
+    let email = document.getElementById('idEmail').value;
+    let senha = document.getElementById('idSenha').value;
+    let c_senha = document.getElementById('conf_senha').value;
+    let checkBox = document.getElementById('idCheckBox');
 
-    var isValid = true;
+    let isValid = true;
 
     if (!checkBox.checked) {
         document.getElementById('erroCheckBox').innerHTML = 'Você deve aceitar os termos de serviço';
@@ -69,6 +69,17 @@ function validar() {
     }
 
     return isValid;
+}
+
+function login(email, senha, c_senha){
+    let emailArm = localStorage.setItem('email');
+    let senhaArm = localStorage.setItem('senha');
+    let c_SenhaArm = localStorage.setItem('c_senha');
+
+    if(emailArm == email && senhaArm == c_SenhaArm){
+
+    }
+
 }
 
 const validateEmail = (event) => {

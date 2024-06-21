@@ -70,6 +70,7 @@ picture {
 section {
     margin: 30px;
     display: none;
+    background-color: var(--corFundo2);
     grid-template-columns: repeat(6, 16.66%);
     grid-template-rows: auto;
     padding: 30px 0;
@@ -122,7 +123,8 @@ input[type="password"] {
     background-color: var(--backgroundInputs);
     height: 30px;
     color: var(--corFonte1);
-    margin-bottom: 15px; /* Adiciona espaçamento entre os campos de entrada */
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 input[type="button"] {
@@ -132,6 +134,11 @@ input[type="button"] {
     background-color: var(--corButton);
     color: var(--corFonte1);
     border-radius: 5px;
+}
+
+input[type="button"]:hover{
+    border: 1px solid var(--Destaque1);
+    cursor: pointer;
 }
 
 label {
@@ -148,6 +155,15 @@ label {
 .areaCadastro {
     display: flex;
     justify-items: center;
+}
+
+#areaLogin{
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 0;
+
 }
 
 fieldset {
