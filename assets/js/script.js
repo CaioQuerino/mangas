@@ -43,12 +43,13 @@ function validar() {
         document.getElementById('erroSenha').innerHTML = '';
     }
 
-    if (email === "") {
-        document.getElementById('erroEmail').innerHTML = 'E-mail inválido';
-        isValid = false;
-    } else {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById('erroEmail').innerHTML = 'Email invalido';
+      }
+      else{
         document.getElementById('erroEmail').innerHTML = '';
-    }
+
+      }
 
     if (nome === "") {
         document.getElementById('erroNome').innerHTML = 'Nome obrigatório';
@@ -69,3 +70,9 @@ function validar() {
 
     return isValid;
 }
+
+const validateEmail = (event) => {
+    let input = event.target;
+    let email = input.value;
+    let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  };
