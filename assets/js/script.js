@@ -63,7 +63,7 @@ function validar() {
         document.getElementById('idEmail').value = '';
         document.getElementById('idSenha').value = '';
         document.getElementById('conf_senha').value = '';
-        document.getElementById('idCheckBox');
+        document.getElementById('idCheckBox').value = '';
         document.getElementById('Registro').innerHTML = 'Registrado com sucesso!';
     }
 

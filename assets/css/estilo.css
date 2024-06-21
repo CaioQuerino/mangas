@@ -104,7 +104,7 @@ section > div {
     grid-column: 1 / -1;
     justify-content: center;
     background-color: #424242;
-    padding: 30px;
+    padding: 30px 30px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
